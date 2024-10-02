@@ -3,13 +3,14 @@
     const correctAnswer ='4';
     const ischecked= document.querySelector('input[name="quiz"]:checked');
    const userAnswer= ischecked.value ;
-   if(userAnswer === correctAnswer){
-    document.querySelector('#feedback').textContent ="Correct! Well done.";}
 
+   if(userAnswer === correctAnswer){
+    document.getElementById('feedback').textContent ="Correct! Well done.";
+   }
     else{
-        document.querySelector('#feedback').textContent="That's incorrect. Try again!";
+        document.getElementById('feedback').textContent="That's incorrect. Try again!";
     }
   }
 
    const submit = document.getElementById("submit-answer");
-   submit.addEventLitsener('click' , checkAnswer);
+  submit.addEventListener('click', checkAnswer);
